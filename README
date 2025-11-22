@@ -1,0 +1,85 @@
+
+Student Result Management System
+
+A simple Java desktop application to manage student results using Java Swing and MySQL.
+This project allows you to Add, View, Update, and Delete student records with automatic calculation of Total, Percentage, and Grade.
+
+Features
+
+	Add new students with their marks.
+	
+	View all student records in a table.
+	
+	Update existing student details and marks.
+	
+	Delete student records.
+
+	Automatic calculation of total marks, percentage, and grade.
+
+
+Input validation:
+
+	Name cannot be empty.
+	
+	Marks must be numeric and between 0 and 100.
+
+Technologies Used
+
+	Java SE (Swing for GUI)
+	
+	MySQL (for storing student records)
+	
+	JDBC for database connectivity.
+
+Project Structure
+
+		StudentResultManagement/
+		│
+		├── src/
+		│   ├── com/gui/          # GUI classes
+		│   │     └── StudentGUI.java
+		│   ├── com/dao/          # DAO interfaces
+		│   │     └── StudentDAO.java
+		│   ├── com/daoimpl/      # DAO implementations
+		│   │     └── StudentDAOImpl.java
+		│   ├── com/model/        # POJO class
+		│   │     └── Student.java
+		│   └── com/util/         # Database connection utility
+		│           └── DBConnection.java
+		│
+		├── README.md
+		└── .gitignore
+
+Database Setup
+
+		Create a MySQL database named student_db.
+		
+		Create a table students:
+		
+		CREATE TABLE students (
+		    id INT PRIMARY KEY AUTO_INCREMENT,
+		    name VARCHAR(100) NOT NULL,
+		    marks1 INT NOT NULL,
+		    marks2 INT NOT NULL,
+		    marks3 INT NOT NULL,
+		    total INT NOT NULL,
+		    percentage FLOAT NOT NULL,
+		    grade VARCHAR(2) NOT NULL
+		);
+
+
+		Update the DBConnection.java with your MySQL username and password.
+
+How to Run:
+
+		Import the project into Eclipse or any Java IDE.
+		
+		Add MySQL JDBC connector to your project libraries.
+		
+		Run StudentGUI.java.
+		
+		Use the GUI to Add, View, Update, or Delete students.
+
+
+
+
